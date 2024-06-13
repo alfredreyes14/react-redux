@@ -1,6 +1,13 @@
 language: node_js
 node_js:
   - stable
+
 dist: focal
+
 before_script:
   - npm install --no-progress
+  - npm install -g npm@latest
+
+script:
+  - npm ci
+  - npx jest --ci
