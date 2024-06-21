@@ -14,11 +14,13 @@
 import { configureStore } from "@reduxjs/toolkit"
 import reducer from "./todo/reducer.js";
 import employeeReducer from "./employee/employeeReducer.js"
+import postReducer from "./post/postReducer.js";
 
 const store = configureStore({
   reducer: {
     tasks: reducer,
-    employees: employeeReducer
+    employees: employeeReducer,
+    posts: postReducer
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(log)
 })
